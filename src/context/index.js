@@ -3,7 +3,7 @@
   you can customize the states for the different components here.
 */
 
-import { createContext, useContext, useReducer, useMemo } from "react";
+import { createContext, useContext, useReducer, useMemo, useState } from "react";
 
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
@@ -55,6 +55,7 @@ function reducer(state, action) {
 
 // Material Dashboard 2 React context provider
 function MaterialUIControllerProvider({ children }) {
+  const [layout, setLayout] = useState("home");
   const initialState = {
     miniSidenav: false,
     transparentSidenav: false,
@@ -64,7 +65,7 @@ function MaterialUIControllerProvider({ children }) {
     fixedNavbar: true,
     openConfigurator: false,
     direction: "ltr",
-    layout: "dashboard",
+    layout: layout,
     darkMode: false,
   };
 
