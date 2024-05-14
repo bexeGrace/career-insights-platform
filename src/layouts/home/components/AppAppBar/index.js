@@ -85,41 +85,29 @@ function AppAppBar({ mode, toggleColorMode }) {
                 alt="logo of sitemark"
               />
               <Box sx={{ display: { xs: "none", md: "flex" } }}>
-                <Link>
-                  <MenuItem
-                    onClick={() => scrollToSection("features")}
-                    sx={{ py: "6px", px: "12px" }}
-                  >
+                <Link to="/dashboard">
+                  <MenuItem sx={{ py: "6px", px: "12px" }}>
                     <Typography variant="body2" color="text.primary">
                       Companies
                     </Typography>
                   </MenuItem>
                 </Link>
-                <Link href>
-                  <MenuItem
-                    onClick={() => scrollToSection("testimonials")}
-                    sx={{ py: "6px", px: "12px" }}
-                  >
+                <Link to="/tables">
+                  <MenuItem sx={{ py: "6px", px: "12px" }}>
                     <Typography variant="body2" color="text.primary">
                       Locations
                     </Typography>
                   </MenuItem>
                 </Link>
-                <Link>
-                  <MenuItem
-                    onClick={() => scrollToSection("highlights")}
-                    sx={{ py: "6px", px: "12px" }}
-                  >
+                <Link to="/dashboard">
+                  <MenuItem sx={{ py: "6px", px: "12px" }}>
                     <Typography variant="body2" color="text.primary">
                       Job Designations
                     </Typography>
                   </MenuItem>
                 </Link>
-                <Link>
-                  <MenuItem
-                    onClick={() => scrollToSection("pricing")}
-                    sx={{ py: "6px", px: "12px" }}
-                  >
+                <Link to="/billing">
+                  <MenuItem sx={{ py: "6px", px: "12px" }}>
                     <Typography variant="body2" color="text.primary">
                       Salaries Scales
                     </Typography>
