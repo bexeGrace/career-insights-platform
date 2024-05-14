@@ -76,7 +76,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Salaries Scales",
+    name: "Salaries  Scales",
     key: "salaries_scales",
     icon: <Icon fontSize="small">receipt_long</Icon>,
     route: "/billing",
