@@ -34,18 +34,18 @@ function ReportsBarChart({ color, title, description, date, chart }) {
 
   return (
     <Card sx={{ height: "100%" }}>
-      <MDBox padding="1rem">
+      <MDBox padding='1rem'>
         {useMemo(
           () => (
             <MDBox
-              variant="gradient"
+              variant='gradient'
               bgColor={color}
-              borderRadius="lg"
+              borderRadius='lg'
               coloredShadow={color}
               py={2}
               pr={0.5}
               mt={-5}
-              height="12.5rem"
+              height='12.5rem'
             >
               <Bar data={data} options={options} redraw />
             </MDBox>
@@ -53,18 +53,18 @@ function ReportsBarChart({ color, title, description, date, chart }) {
           [color, chart]
         )}
         <MDBox pt={3} pb={1} px={1}>
-          <MDTypography variant="h6" textTransform="capitalize">
+          <MDTypography variant='h6' textTransform='capitalize'>
             {title}
           </MDTypography>
-          <MDTypography component="div" variant="button" color="text" fontWeight="light">
+          <MDTypography component='div' variant='button' color='text' fontWeight='light'>
             {description}
           </MDTypography>
           <Divider />
-          <MDBox display="flex" alignItems="center">
-            <MDTypography variant="button" color="text" lineHeight={1} sx={{ mt: 0.15, mr: 0.5 }}>
+          <MDBox display='flex' alignItems='center'>
+            <MDTypography variant='button' color='text' lineHeight={1} sx={{ mt: 0.15, mr: 0.5 }}>
               <Icon>schedule</Icon>
             </MDTypography>
-            <MDTypography variant="button" color="text" fontWeight="light">
+            <MDTypography variant='button' color='text' fontWeight='light'>
               {date}
             </MDTypography>
           </MDBox>

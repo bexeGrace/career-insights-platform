@@ -89,9 +89,9 @@ function DashboardNavbar({ absolute, light, isMini }) {
       onClose={handleCloseMenu}
       sx={{ mt: 2 }}
     >
-      <NotificationItem icon={<Icon>email</Icon>} title="Check new messages" />
-      <NotificationItem icon={<Icon>podcasts</Icon>} title="Manage Podcast sessions" />
-      <NotificationItem icon={<Icon>shopping_cart</Icon>} title="Payment successfully completed" />
+      <NotificationItem icon={<Icon>email</Icon>} title='Check new messages' />
+      <NotificationItem icon={<Icon>podcasts</Icon>} title='Manage Podcast sessions' />
+      <NotificationItem icon={<Icon>shopping_cart</Icon>} title='Payment successfully completed' />
     </Menu>
   );
 
@@ -111,52 +111,52 @@ function DashboardNavbar({ absolute, light, isMini }) {
   return (
     <AppBar
       position={absolute ? "absolute" : navbarType}
-      color="inherit"
+      color='inherit'
       sx={(theme) => navbar(theme, { transparentNavbar, absolute, light, darkMode })}
     >
       <Toolbar sx={(theme) => navbarContainer(theme)}>
-        <MDBox color="inherit" mb={{ xs: 1, md: 0 }} sx={(theme) => navbarRow(theme, { isMini })}>
-          <Breadcrumbs icon="home" title={route[route.length - 1]} route={route} light={light} />
+        <MDBox color='inherit' mb={{ xs: 1, md: 0 }} sx={(theme) => navbarRow(theme, { isMini })}>
+          <Breadcrumbs icon='home' title={route[route.length - 1]} route={route} light={light} />
         </MDBox>
         {isMini ? null : (
           <MDBox sx={(theme) => navbarRow(theme, { isMini })}>
             <MDBox pr={1}>
-              <MDInput label="Search here" />
+              <MDInput label='Search here' />
             </MDBox>
             <MDBox color={light ? "white" : "inherit"}>
-              <Link to="/authentication/sign-in/basic">
-                <IconButton sx={navbarIconButton} size="small" disableRipple>
+              <Link to='/authentication/sign-in/basic'>
+                <IconButton sx={navbarIconButton} size='small' disableRipple>
                   <Icon sx={iconsStyle}>account_circle</Icon>
                 </IconButton>
               </Link>
               <IconButton
-                size="small"
+                size='small'
                 disableRipple
-                color="inherit"
+                color='inherit'
                 sx={navbarMobileMenu}
                 onClick={handleMiniSidenav}
               >
-                <Icon sx={iconsStyle} fontSize="medium">
+                <Icon sx={iconsStyle} fontSize='medium'>
                   {miniSidenav ? "menu_open" : "menu"}
                 </Icon>
               </IconButton>
               <IconButton
-                size="small"
+                size='small'
                 disableRipple
-                color="inherit"
+                color='inherit'
                 sx={navbarIconButton}
                 onClick={handleConfiguratorOpen}
               >
                 <Icon sx={iconsStyle}>settings</Icon>
               </IconButton>
               <IconButton
-                size="small"
+                size='small'
                 disableRipple
-                color="inherit"
+                color='inherit'
                 sx={navbarIconButton}
-                aria-controls="notification-menu"
-                aria-haspopup="true"
-                variant="contained"
+                aria-controls='notification-menu'
+                aria-haspopup='true'
+                variant='contained'
                 onClick={handleOpenMenu}
               >
                 <Icon sx={iconsStyle}>notifications</Icon>

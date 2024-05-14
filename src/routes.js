@@ -36,6 +36,7 @@ Coded by www.creative-tim.com
 */
 
 // Material Dashboard 2 React layouts
+import Home from "layouts/home";
 import Dashboard from "layouts/dashboard";
 import Tables from "layouts/tables";
 import Billing from "layouts/billing";
@@ -53,15 +54,15 @@ const routes = [
     type: "collapse",
     name: "Home",
     key: "home",
-    icon: <Icon fontSize="small">Home</Icon>,
+    icon: <Icon fontSize='small'>Home</Icon>,
     route: "/",
-    component: <Home />
+    component: <Home />,
   },
   {
     type: "collapse",
     name: "Dashboard",
     key: "dashboard",
-    icon: <Icon fontSize="small">dashboard</Icon>,
+    icon: <Icon fontSize='small'>dashboard</Icon>,
     route: "/dashboard",
     component: <Dashboard />,
   },
@@ -69,7 +70,7 @@ const routes = [
     type: "collapse",
     name: "Tables",
     key: "tables",
-    icon: <Icon fontSize="small">table_view</Icon>,
+    icon: <Icon fontSize='small'>table_view</Icon>,
     route: "/tables",
     component: <Tables />,
   },
@@ -77,7 +78,7 @@ const routes = [
     type: "collapse",
     name: "Billing",
     key: "billing",
-    icon: <Icon fontSize="small">receipt_long</Icon>,
+    icon: <Icon fontSize='small'>receipt_long</Icon>,
     route: "/billing",
     component: <Billing />,
   },
@@ -85,7 +86,7 @@ const routes = [
     type: "collapse",
     name: "RTL",
     key: "rtl",
-    icon: <Icon fontSize="small">format_textdirection_r_to_l</Icon>,
+    icon: <Icon fontSize='small'>format_textdirection_r_to_l</Icon>,
     route: "/rtl",
     component: <RTL />,
   },
@@ -93,7 +94,7 @@ const routes = [
     type: "collapse",
     name: "Notifications",
     key: "notifications",
-    icon: <Icon fontSize="small">notifications</Icon>,
+    icon: <Icon fontSize='small'>notifications</Icon>,
     route: "/notifications",
     component: <Notifications />,
   },
@@ -101,7 +102,7 @@ const routes = [
     type: "collapse",
     name: "Profile",
     key: "profile",
-    icon: <Icon fontSize="small">person</Icon>,
+    icon: <Icon fontSize='small'>person</Icon>,
     route: "/profile",
     component: <Profile />,
   },
@@ -109,7 +110,7 @@ const routes = [
     type: "collapse",
     name: "Sign In",
     key: "sign-in",
-    icon: <Icon fontSize="small">login</Icon>,
+    icon: <Icon fontSize='small'>login</Icon>,
     route: "/authentication/sign-in",
     component: <SignIn />,
   },
@@ -117,7 +118,7 @@ const routes = [
     type: "collapse",
     name: "Sign Up",
     key: "sign-up",
-    icon: <Icon fontSize="small">assignment</Icon>,
+    icon: <Icon fontSize='small'>assignment</Icon>,
     route: "/authentication/sign-up",
     component: <SignUp />,
   },

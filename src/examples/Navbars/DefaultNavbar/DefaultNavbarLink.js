@@ -17,8 +17,8 @@ function DefaultNavbarLink({ icon, name, route, light }) {
       to={route}
       mx={1}
       p={1}
-      display="flex"
-      alignItems="center"
+      display='flex'
+      alignItems='center'
       sx={{ cursor: "pointer", userSelect: "none" }}
     >
       <Icon
@@ -30,10 +30,10 @@ function DefaultNavbarLink({ icon, name, route, light }) {
         {icon}
       </Icon>
       <MDTypography
-        variant="button"
-        fontWeight="regular"
+        variant='button'
+        fontWeight='regular'
         color={light ? "white" : "dark"}
-        textTransform="capitalize"
+        textTransform='capitalize'
         sx={{ width: "100%", lineHeight: 0 }}
       >
         &nbsp;{name}

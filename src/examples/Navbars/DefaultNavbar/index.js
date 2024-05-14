@@ -67,14 +67,14 @@ function DefaultNavbar({ transparent, light, action }) {
         px={{ xs: 4, sm: transparent ? 2 : 3, lg: transparent ? 0 : 2 }}
         my={3}
         mx={3}
-        width="calc(100% - 48px)"
-        borderRadius="lg"
+        width='calc(100% - 48px)'
+        borderRadius='lg'
         shadow={transparent ? "none" : "md"}
         color={light ? "white" : "dark"}
-        display="flex"
-        justifyContent="space-between"
-        alignItems="center"
-        position="absolute"
+        display='flex'
+        justifyContent='space-between'
+        alignItems='center'
+        position='absolute'
         left={0}
         zIndex={3}
         sx={({
@@ -89,28 +89,28 @@ function DefaultNavbar({ transparent, light, action }) {
       >
         <MDBox
           component={Link}
-          to="/"
+          to='/'
           py={transparent ? 1.5 : 0.75}
           lineHeight={1}
           pl={{ xs: 0, lg: 1 }}
         >
-          <MDTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
+          <MDTypography variant='button' fontWeight='bold' color={light ? "white" : "dark"}>
             Material Dashboard 2
           </MDTypography>
         </MDBox>
-        <MDBox color="inherit" display={{ xs: "none", lg: "flex" }} m={0} p={0}>
-          <DefaultNavbarLink icon="donut_large" name="dashboard" route="/dashboard" light={light} />
-          <DefaultNavbarLink icon="person" name="profile" route="/profile" light={light} />
+        <MDBox color='inherit' display={{ xs: "none", lg: "flex" }} m={0} p={0}>
+          <DefaultNavbarLink icon='donut_large' name='dashboard' route='/dashboard' light={light} />
+          <DefaultNavbarLink icon='person' name='profile' route='/profile' light={light} />
           <DefaultNavbarLink
-            icon="account_circle"
-            name="sign up"
-            route="/authentication/sign-up"
+            icon='account_circle'
+            name='sign up'
+            route='/authentication/sign-up'
             light={light}
           />
           <DefaultNavbarLink
-            icon="key"
-            name="sign in"
-            route="/authentication/sign-in"
+            icon='key'
+            name='sign in'
+            route='/authentication/sign-in'
             light={light}
           />
         </MDBox>
@@ -120,9 +120,9 @@ function DefaultNavbar({ transparent, light, action }) {
               <MDButton
                 component={Link}
                 to={action.route}
-                variant="gradient"
+                variant='gradient'
                 color={action.color ? action.color : "info"}
-                size="small"
+                size='small'
               >
                 {action.label}
               </MDButton>
@@ -130,13 +130,13 @@ function DefaultNavbar({ transparent, light, action }) {
           ) : (
             <MDBox display={{ xs: "none", lg: "inline-block" }}>
               <MDButton
-                component="a"
+                component='a'
                 href={action.route}
-                target="_blank"
-                rel="noreferrer"
-                variant="gradient"
+                target='_blank'
+                rel='noreferrer'
+                variant='gradient'
                 color={action.color ? action.color : "info"}
-                size="small"
+                size='small'
                 sx={{ mt: -0.3 }}
               >
                 {action.label}
@@ -148,11 +148,11 @@ function DefaultNavbar({ transparent, light, action }) {
           lineHeight={0}
           py={1.5}
           pl={1.5}
-          color="inherit"
+          color='inherit'
           sx={{ cursor: "pointer" }}
           onClick={openMobileNavbar}
         >
-          <Icon fontSize="default">{mobileNavbar ? "close" : "menu"}</Icon>
+          <Icon fontSize='default'>{mobileNavbar ? "close" : "menu"}</Icon>
         </MDBox>
       </MDBox>
       {mobileView && <DefaultNavbarMobile open={mobileNavbar} close={closeMobileNavbar} />}

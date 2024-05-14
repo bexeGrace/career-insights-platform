@@ -35,9 +35,9 @@ const MDPagination = forwardRef(
           </MDPaginationItemRoot>
         ) : (
           <MDBox
-            display="flex"
-            justifyContent="flex-end"
-            alignItems="center"
+            display='flex'
+            justifyContent='flex-end'
+            alignItems='center'
             sx={{ listStyle: "none" }}
           >
             {children}

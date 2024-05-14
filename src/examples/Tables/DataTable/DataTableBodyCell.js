@@ -7,7 +7,7 @@ import MDBox from "components/MDBox";
 function DataTableBodyCell({ noBorder, align, children }) {
   return (
     <MDBox
-      component="td"
+      component='td'
       textAlign={align}
       py={1.5}
       px={3}
@@ -17,9 +17,9 @@ function DataTableBodyCell({ noBorder, align, children }) {
       })}
     >
       <MDBox
-        display="inline-block"
-        width="max-content"
-        color="text"
+        display='inline-block'
+        width='max-content'
+        color='text'
         sx={{ verticalAlign: "middle" }}
       >
         {children}

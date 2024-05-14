@@ -12,7 +12,7 @@ const MDBadge = forwardRef(
       {...rest}
       ownerState={{ color, variant, size, circular, indicator, border, container, children }}
       ref={ref}
-      color="default"
+      color='default'
     >
       {children}
     </MDBadgeRoot>

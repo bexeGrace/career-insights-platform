@@ -45,42 +45,42 @@ function ProgressLineChart({ color, icon, title, count, progress, height, chart 
 
   return (
     <Card>
-      <MDBox display="flex" alignItems="center" pt={2} px={2}>
+      <MDBox display='flex' alignItems='center' pt={2} px={2}>
         <MDBox
-          width="3rem"
-          height="3rem"
-          display="grid"
-          justifyContent="center"
-          alignItems="center"
-          borderRadius="md"
-          shadow="md"
-          color="white"
+          width='3rem'
+          height='3rem'
+          display='grid'
+          justifyContent='center'
+          alignItems='center'
+          borderRadius='md'
+          shadow='md'
+          color='white'
           bgColor={color}
-          variant="gradient"
+          variant='gradient'
         >
-          <Icon fontSize="default">{icon}</Icon>
+          <Icon fontSize='default'>{icon}</Icon>
         </MDBox>
         <MDBox ml={2} lineHeight={1}>
           <MDTypography
-            variant="button"
-            fontWeight="regular"
-            textTransform="capitalize"
-            color="text"
+            variant='button'
+            fontWeight='regular'
+            textTransform='capitalize'
+            color='text'
           >
             {title}
           </MDTypography>
           {count ? (
-            <MDTypography variant="h5" fontWeight="bold">
+            <MDTypography variant='h5' fontWeight='bold'>
               {count}
             </MDTypography>
           ) : null}
         </MDBox>
-        <MDBox width="25%" ml="auto">
-          <MDTypography display="block" variant="caption" fontWeight="medium" color="text">
+        <MDBox width='25%' ml='auto'>
+          <MDTypography display='block' variant='caption' fontWeight='medium' color='text'>
             {progress}%
           </MDTypography>
           <MDBox mt={0.25}>
-            <MDProgress variant="gradient" color={color} value={progress} />
+            <MDProgress variant='gradient' color={color} value={progress} />
           </MDBox>
         </MDBox>
       </MDBox>
