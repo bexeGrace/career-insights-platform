@@ -12,6 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import ToggleColorMode from "../ToggleColorMode";
+import { Link } from "react-router-dom";
 
 const logoStyle = {
   width: "140px",
@@ -67,7 +68,15 @@ function AppAppBar({ mode, toggleColorMode }) {
               borderColor: "divider",
             })}
           >
-            <div>
+            <Box
+              sx={{
+                flexGrow: 1,
+                display: "flex",
+                alignItems: "center",
+                ml: "-18px",
+                px: 0,
+              }}
+            >
               <img
                 src={
                   "https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg"
@@ -75,8 +84,49 @@ function AppAppBar({ mode, toggleColorMode }) {
                 style={logoStyle}
                 alt="logo of sitemark"
               />
-              <Box sx={{ display: { xs: "none", md: "flex" } }}></Box>
-            </div>
+              <Box sx={{ display: { xs: "none", md: "flex" } }}>
+                <Link>
+                  <MenuItem
+                    onClick={() => scrollToSection("features")}
+                    sx={{ py: "6px", px: "12px" }}
+                  >
+                    <Typography variant="body2" color="text.primary">
+                      Companies
+                    </Typography>
+                  </MenuItem>
+                </Link>
+                <Link href>
+                  <MenuItem
+                    onClick={() => scrollToSection("testimonials")}
+                    sx={{ py: "6px", px: "12px" }}
+                  >
+                    <Typography variant="body2" color="text.primary">
+                      Locations
+                    </Typography>
+                  </MenuItem>
+                </Link>
+                <Link>
+                  <MenuItem
+                    onClick={() => scrollToSection("highlights")}
+                    sx={{ py: "6px", px: "12px" }}
+                  >
+                    <Typography variant="body2" color="text.primary">
+                      Job Designations
+                    </Typography>
+                  </MenuItem>
+                </Link>
+                <Link>
+                  <MenuItem
+                    onClick={() => scrollToSection("pricing")}
+                    sx={{ py: "6px", px: "12px" }}
+                  >
+                    <Typography variant="body2" color="text.primary">
+                      Salaries Scales
+                    </Typography>
+                  </MenuItem>
+                </Link>
+              </Box>
+            </Box>
             <Box
               sx={{
                 display: { xs: "none", md: "flex" },
