@@ -51,6 +51,14 @@ import Icon from "@mui/material/Icon";
 const routes = [
   {
     type: "collapse",
+    name: "Home",
+    key: "home",
+    icon: <Icon fontSize="small">Home</Icon>,
+    route: "/",
+    component: <Home />
+  },
+  {
+    type: "collapse",
     name: "Dashboard",
     key: "dashboard",
     icon: <Icon fontSize="small">dashboard</Icon>,
