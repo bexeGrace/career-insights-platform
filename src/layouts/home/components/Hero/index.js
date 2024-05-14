@@ -1,5 +1,5 @@
 import * as React from "react";
-import { alpha } from "@mui/material";
+import { FormControl, InputLabel, MenuItem, Select, alpha } from "@mui/material";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
@@ -9,6 +9,11 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 
 export default function Hero() {
+  const [searchArea, setSearchArea] = React.useState("designation"); // Default search area
+
+  const handleSearchAreaChange = (event) => {
+    setSearchArea(event.target.value);
+  };
   return (
     <Box
       id="hero"
@@ -42,7 +47,7 @@ export default function Hero() {
               fontSize: "clamp(3.5rem, 10vw, 4rem)",
             }}
           >
-            Our latest&nbsp;
+            Welcome to &nbsp;
             <Typography
               component="span"
               variant="h1"
@@ -52,7 +57,7 @@ export default function Hero() {
                   theme.palette.mode === "light" ? "primary.main" : "primary.light",
               }}
             >
-              products
+              Sitemark
             </Typography>
           </Typography>
           <Typography
@@ -60,8 +65,10 @@ export default function Hero() {
             color="text.secondary"
             sx={{ alignSelf: "center", width: { sm: "100%", md: "80%" } }}
           >
-            Explore our cutting-edge dashboard, delivering high-quality solutions tailored to your
-            needs. Elevate your experience with top-tier features and services.
+            Explore detailed information about various companies, such as Facebook, and gain
+            insights into their organizational culture, values, and career opportunities. Discover
+            the latest salary details for different job titles within each company and make informed
+            decisions about your career path.
           </Typography>
           <Stack
             direction={{ xs: "column", sm: "row" }}
@@ -70,29 +77,45 @@ export default function Hero() {
             useFlexGap
             sx={{ pt: 2, width: { xs: "100%", sm: "auto" } }}
           >
-            <TextField
-              id="outlined-basic"
-              hiddenLabel
-              size="small"
-              variant="outlined"
-              aria-label="Enter your email address"
-              placeholder="Your email address"
-              inputProps={{
-                autoComplete: "off",
-                "aria-label": "Enter your email address",
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "end",
+                flexGrow: 2,
+                gap: 1,
               }}
-            />
-            <Button variant="contained" color="primary">
-              Start now
-            </Button>
+            >
+              <FormControl variant="outlined" size="small">
+                <InputLabel id="search-area-label">Looking for: </InputLabel>
+                <Select
+                  labelId="search-area-label"
+                  id="search-area-select"
+                  value={searchArea}
+                  onChange={handleSearchAreaChange}
+                  label="Search Area"
+                >
+                  <MenuItem value="designation">Designation</MenuItem>
+                  <MenuItem value="company">Company</MenuItem>
+                  <MenuItem value="location">Location</MenuItem>
+                </Select>
+              </FormControl>
+              <TextField
+                id="outlined-basic"
+                hiddenLabel
+                size="large"
+                variant="outlined"
+                aria-label={`Enter your ${searchArea}`}
+                placeholder={`Search for jobs by ${searchArea}`}
+                inputProps={{
+                  autoComplete: "off",
+                  "aria-label": `Enter your ${searchArea}`,
+                }}
+              />
+              <Button variant="contained" color="primary">
+                Search
+              </Button>
+            </Box>
           </Stack>
-          <Typography variant="caption" textAlign="center" sx={{ opacity: 0.8 }}>
-            By clicking &quot;Start now&quot; you agree to our&nbsp;
-            <Link href="#" color="primary">
-              Terms & Conditions
-            </Link>
-            .
-          </Typography>
         </Stack>
         <Box
           id="image"
