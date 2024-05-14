@@ -16,25 +16,29 @@ import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
 const items = [
   {
     icon: <ViewQuiltRoundedIcon />,
-    title: "Dashboard",
+    title: "Google",
     description:
-      "This item could provide a snapshot of the most important metrics or data points related to the product.",
-    imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
+      " Google is a multinational technology company known for its search engine, offering a wide range of internet-related services and products.",
+    imageLight:
+      'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdPPVdPId0QpNRk5qj6recuqtKHsiWAiO9xorHv_jERg&s")',
     imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
   },
   {
     icon: <EdgesensorHighRoundedIcon />,
-    title: "Mobile integration",
-    description: "This item could provide information about the mobile app version of the product.",
-    imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
+    title: "Facebook",
+    description:
+      "Facebook is a social media platform connecting billions worldwide, offering features like networking, content sharing, and advertising opportunities.",
+    imageLight:
+      'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToMUR8aTxCGaA-hu4RP0pjBngsXltBKDdSuaeAfcKxyQ&s")',
     imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
   },
   {
     icon: <DevicesRoundedIcon />,
-    title: "Available on all platforms",
+    title: "Microsoft",
     description:
-      "This item could let users know the product is available on all platforms, such as web, mobile, and desktop.",
-    imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
+      "Microsoft is a leading global technology corporation, specializing in software development, cloud computing, and hardware products such as the Windows operating system and Office suite.",
+    imageLight:
+      'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2sbdsCHWhJEHJ22DTeG_0GWCZD8kOFtwXlcGZjf0Tvw&s")',
     imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
   },
 ];
@@ -54,12 +58,13 @@ export default function Features() {
         <Grid item xs={12} md={6}>
           <div>
             <Typography component="h2" variant="h4" color="text.primary">
-              Product features
+              Discover Good Paying Companies
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ mb: { xs: 2, sm: 4 } }}>
-              Here you can provide a brief overview of the key features of the product. For example,
-              you could list the number of features, the types of features, add-ons, or the benefits
-              of the features.
+              Dive deep into the specifics of each job title within renowned companies like
+              Facebook. Whether you&apos;re interested in becoming a Software Engineer or a Data
+              Scientist, our dedicated pages provide comprehensive details, including salary
+              breakdowns and additional relevant information.
             </Typography>
           </div>
           <Grid container item gap={1} sx={{ display: { xs: "auto", sm: "none" } }}>

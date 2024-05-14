@@ -7,6 +7,7 @@ import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
+import IframeBox from "./IframeBox";
 
 export default function Hero() {
   const [searchArea, setSearchArea] = React.useState("designation"); // Default search area
@@ -44,7 +45,7 @@ export default function Hero() {
               flexDirection: { xs: "column", md: "row" },
               alignSelf: "center",
               textAlign: "center",
-              fontSize: "clamp(3.5rem, 10vw, 4rem)",
+              fontSize: "clamp(4rem, 12vw, 5rem)",
             }}
           >
             Welcome to &nbsp;
@@ -52,7 +53,7 @@ export default function Hero() {
               component="span"
               variant="h1"
               sx={{
-                fontSize: "clamp(3rem, 10vw, 4rem)",
+                fontSize: "clamp(3.5rem, 10.5vw, 5rem)",
                 color: (theme) =>
                   theme.palette.mode === "light" ? "primary.main" : "primary.light",
               }}
@@ -63,6 +64,7 @@ export default function Hero() {
           <Typography
             textAlign="center"
             color="text.secondary"
+            fontSize={"clamp(1.5rem, 5vw, 1rem)"}
             sx={{ alignSelf: "center", width: { sm: "100%", md: "80%" } }}
           >
             Explore detailed information about various companies, such as Facebook, and gain
@@ -81,15 +83,19 @@ export default function Hero() {
               sx={{
                 display: "flex",
                 alignItems: "end",
+                fontSize: "clamp(3.5rem, 10.5vw, 5rem)", // Adjust the font size for the entire box
                 flexGrow: 2,
                 gap: 1,
               }}
             >
-              <FormControl variant="outlined" size="small">
-                <InputLabel id="search-area-label">Looking for: </InputLabel>
+              <FormControl variant="outlined" size="large">
+                <InputLabel id="search-area-label" style={{ fontSize: "clamp(.5rem, 2vw, 1rem)" }}>
+                  Looking for:
+                </InputLabel>
                 <Select
                   labelId="search-area-label"
                   id="search-area-select"
+                  style={{ fontSize: "clamp(1rem, 2vw, 1rem)" }} // Adjust the font size for the select component
                   value={searchArea}
                   onChange={handleSearchAreaChange}
                   label="Search Area"
@@ -110,8 +116,13 @@ export default function Hero() {
                   autoComplete: "off",
                   "aria-label": `Enter your ${searchArea}`,
                 }}
+                style={{ fontSize: "clamp(1.5rem, 5vw, 2rem)" }} // Adjust the font size for the text field
               />
-              <Button variant="contained" color="primary">
+              <Button
+                variant="contained"
+                color="primary"
+                style={{ fontSize: "clamp(1.5rem, 5vw, 2rem)" }}
+              >
                 Search
               </Button>
             </Box>
@@ -138,7 +149,9 @@ export default function Hero() {
                 ? `0 0 12px 8px ${alpha("#9CCCFC", 0.2)}`
                 : `0 0 24px 12px ${alpha("#033363", 0.2)}`,
           })}
-        />
+        >
+          <IframeBox url={"http://localhost:3000/dashboard/"} width={1300} height={700} />
+        </Box>
       </Container>
     </Box>
   );

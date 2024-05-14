@@ -15,39 +15,39 @@ import ThumbUpAltRoundedIcon from "@mui/icons-material/ThumbUpAltRounded";
 const items = [
   {
     icon: <SettingsSuggestRoundedIcon />,
-    title: "Adaptable performance",
+    title: "Software Engineer",
     description:
-      "Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.",
+      " Develop and maintain software applications or systems, collaborating with teams to solve technical challenges and deliver high-quality products.",
   },
   {
     icon: <ConstructionRoundedIcon />,
-    title: "Built to last",
+    title: "Product Manager",
     description:
-      "Experience unmatched durability that goes above and beyond with lasting investment.",
+      " Drives the development and strategy of products, working with cross-functional teams to define features, prioritize tasks, and ensure alignment with business goals and user needs.",
   },
   {
     icon: <ThumbUpAltRoundedIcon />,
-    title: "Great user experience",
+    title: "Data Scientist",
     description:
-      "Integrate our product into your routine with an intuitive and easy-to-use interface.",
+      "Analyzes large datasets using statistical and machine learning techniques to extract insights, make predictions, and inform data-driven decision-making processes.",
   },
   {
     icon: <AutoFixHighRoundedIcon />,
-    title: "Innovative functionality",
+    title: "Financial Analyst",
     description:
-      "Stay ahead with features that set new standards, addressing your evolving needs better than the rest.",
+      " Evaluates financial data and trends to provide insights and recommendations for investment decisions, budgeting, forecasting, and strategic planning within organizations",
   },
   {
     icon: <SupportAgentRoundedIcon />,
-    title: "Reliable support",
+    title: "Marketing Manager",
     description:
-      "Count on our responsive customer support, offering assistance that goes beyond the purchase.",
+      " Leads marketing initiatives, developing strategies to promote products or services, enhance brand awareness, and engage with target audiences through various channels such as digital marketing, advertising, and events",
   },
   {
     icon: <QueryStatsRoundedIcon />,
-    title: "Precision in every detail",
+    title: "Operations Manager",
     description:
-      "Enjoy a meticulously crafted product where small touches make a significant impact on your overall experience.",
+      " Oversees the day-to-day operations of a business or department, optimizing processes, managing resources, and ensuring efficient workflows to meet organizational objectives and deliver quality products or services.",
   },
 ];
 
@@ -78,11 +78,13 @@ export default function Highlights() {
           }}
         >
           <Typography component="h2" variant="h4">
-            Highlights
+            Discover Your Dream Role
           </Typography>
           <Typography variant="body1" sx={{ color: "grey.400" }}>
-            Explore why our product stands out: adaptability, durability, user-friendly design, and
-            innovation. Enjoy reliable customer support and precision in every detail.
+            Delve into the intricacies of different job titles, from Software Engineer to Product
+            Manager, and uncover what each role entails. Learn about the responsibilities,
+            qualifications, and salary information associated with each designation to find the
+            perfect fit for your skills and aspirations.
           </Typography>
         </Box>
         <Grid container spacing={2.5}>
