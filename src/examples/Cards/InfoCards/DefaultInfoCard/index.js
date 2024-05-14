@@ -13,34 +13,34 @@ import MDTypography from "components/MDTypography";
 function DefaultInfoCard({ color, icon, title, description, value }) {
   return (
     <Card>
-      <MDBox p={2} mx={3} display='flex' justifyContent='center'>
+      <MDBox p={2} mx={3} display="flex" justifyContent="center">
         <MDBox
-          display='grid'
-          justifyContent='center'
-          alignItems='center'
+          display="grid"
+          justifyContent="center"
+          alignItems="center"
           bgColor={color}
-          color='white'
-          width='4rem'
-          height='4rem'
-          shadow='md'
-          borderRadius='lg'
-          variant='gradient'
+          color="white"
+          width="4rem"
+          height="4rem"
+          shadow="md"
+          borderRadius="lg"
+          variant="gradient"
         >
-          <Icon fontSize='default'>{icon}</Icon>
+          <Icon fontSize="default">{icon}</Icon>
         </MDBox>
       </MDBox>
-      <MDBox pb={2} px={2} textAlign='center' lineHeight={1.25}>
-        <MDTypography variant='h6' fontWeight='medium' textTransform='capitalize'>
+      <MDBox pb={2} px={2} textAlign="center" lineHeight={1.25}>
+        <MDTypography variant="h6" fontWeight="medium" textTransform="capitalize">
           {title}
         </MDTypography>
         {description && (
-          <MDTypography variant='caption' color='text' fontWeight='regular'>
+          <MDTypography variant="caption" color="text" fontWeight="regular">
             {description}
           </MDTypography>
         )}
         {description && !value ? null : <Divider />}
         {value && (
-          <MDTypography variant='h5' fontWeight='medium'>
+          <MDTypography variant="h5" fontWeight="medium">
             {value}
           </MDTypography>
         )}

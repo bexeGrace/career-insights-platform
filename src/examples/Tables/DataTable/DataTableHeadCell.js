@@ -16,7 +16,7 @@ function DataTableHeadCell({ width, children, sorted, align, ...rest }) {
 
   return (
     <MDBox
-      component='th'
+      component="th"
       width={width}
       py={1.5}
       px={3}
@@ -26,7 +26,7 @@ function DataTableHeadCell({ width, children, sorted, align, ...rest }) {
     >
       <MDBox
         {...rest}
-        position='relative'
+        position="relative"
         textAlign={align}
         color={darkMode ? "white" : "secondary"}
         opacity={0.7}
@@ -41,7 +41,7 @@ function DataTableHeadCell({ width, children, sorted, align, ...rest }) {
         {children}
         {sorted && (
           <MDBox
-            position='absolute'
+            position="absolute"
             top={0}
             right={align !== "right" ? "16px" : 0}
             left={align === "right" ? "-5px" : "unset"}
@@ -50,7 +50,7 @@ function DataTableHeadCell({ width, children, sorted, align, ...rest }) {
             })}
           >
             <MDBox
-              position='absolute'
+              position="absolute"
               top={-6}
               color={sorted === "asce" ? "text" : "secondary"}
               opacity={sorted === "asce" ? 1 : 0.5}
@@ -58,7 +58,7 @@ function DataTableHeadCell({ width, children, sorted, align, ...rest }) {
               <Icon>arrow_drop_up</Icon>
             </MDBox>
             <MDBox
-              position='absolute'
+              position="absolute"
               top={0}
               color={sorted === "desc" ? "text" : "secondary"}
               opacity={sorted === "desc" ? 1 : 0.5}

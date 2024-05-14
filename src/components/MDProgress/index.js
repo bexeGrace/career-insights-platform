@@ -12,14 +12,14 @@ import MDProgressRoot from "components/MDProgress/MDProgressRoot";
 const MDProgress = forwardRef(({ variant, color, value, label, ...rest }, ref) => (
   <>
     {label && (
-      <MDTypography variant='button' fontWeight='medium' color='text'>
+      <MDTypography variant="button" fontWeight="medium" color="text">
         {value}%
       </MDTypography>
     )}
     <MDProgressRoot
       {...rest}
       ref={ref}
-      variant='determinate'
+      variant="determinate"
       value={value}
       ownerState={{ color, value, variant }}
     />

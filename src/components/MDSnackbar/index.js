@@ -49,18 +49,18 @@ function MDSnackbar({ color, icon, title, dateTime, content, close, bgWhite, ...
       }}
       {...rest}
       action={
-        <IconButton size='small' aria-label='close' color='inherit' onClick={close}>
-          <Icon fontSize='small'>close</Icon>
+        <IconButton size="small" aria-label="close" color="inherit" onClick={close}>
+          <Icon fontSize="small">close</Icon>
         </IconButton>
       }
     >
       <MDBox
         variant={bgWhite ? "contained" : "gradient"}
         bgColor={bgWhite ? "white" : color}
-        minWidth='21.875rem'
-        maxWidth='100%'
-        shadow='md'
-        borderRadius='md'
+        minWidth="21.875rem"
+        maxWidth="100%"
+        shadow="md"
+        borderRadius="md"
         p={1}
         sx={{
           backgroundColor: ({ palette }) =>
@@ -68,27 +68,27 @@ function MDSnackbar({ color, icon, title, dateTime, content, close, bgWhite, ...
         }}
       >
         <MDBox
-          display='flex'
-          justifyContent='space-between'
-          alignItems='center'
-          color='dark'
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+          color="dark"
           p={1.5}
         >
-          <MDBox display='flex' alignItems='center' lineHeight={0}>
-            <MDSnackbarIconRoot fontSize='small' ownerState={{ color, bgWhite }}>
+          <MDBox display="flex" alignItems="center" lineHeight={0}>
+            <MDSnackbarIconRoot fontSize="small" ownerState={{ color, bgWhite }}>
               {icon}
             </MDSnackbarIconRoot>
             <MDTypography
-              variant='button'
-              fontWeight='medium'
+              variant="button"
+              fontWeight="medium"
               color={titleColor}
               textGradient={bgWhite}
             >
               {title}
             </MDTypography>
           </MDBox>
-          <MDBox display='flex' alignItems='center' lineHeight={0}>
-            <MDTypography variant='caption' color={dateTimeColor}>
+          <MDBox display="flex" alignItems="center" lineHeight={0}>
+            <MDTypography variant="caption" color={dateTimeColor}>
               {dateTime}
             </MDTypography>
             <Icon

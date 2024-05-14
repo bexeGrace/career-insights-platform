@@ -22,7 +22,7 @@ function MDAlert({ color, dismissible, children, ...rest }) {
   const alertTemplate = (mount = true) => (
     <Fade in={mount} timeout={300}>
       <MDAlertRoot ownerState={{ color }} {...rest}>
-        <MDBox display='flex' alignItems='center' color='white'>
+        <MDBox display="flex" alignItems="center" color="white">
           {children}
         </MDBox>
         {dismissible ? (
