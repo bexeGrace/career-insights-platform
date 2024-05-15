@@ -1,16 +1,15 @@
 {
-  "name": "material-dashboard-2-react",
+  "name": "sitemark-career-insight",
   "version": "2.2.0",
   "private": true,
-  "author": "Creative Tim",
-  "license": "See license in https://www.creative-tim.com/license",
-  "description": "React version of Material Dashboard 2 by Creative Tim",
+  "author": "Betsegaw Mesele",
+  "description": "React App of Live Career Insights",
   "bugs": {
     "url": "https://github.com/creativetimofficial/material-dashboard-react/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/material-dashboard-react.git"
+    "url": "git+https://github.com/bexeGrace/career-insights-platform.git"
   },
   "dependencies": {
     "@emotion/cache": "11.10.8",
